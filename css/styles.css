@@ -1,0 +1,481 @@
+/* Custom Layout */
+@-webkit-keyframes hamburger {
+  0%,
+    50%,
+    100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  75% {
+    -webkit-transform: translate(-3px);
+    transform: translate(-3px);
+  }
+}
+@keyframes hamburger {
+  0%,
+    50%,
+    100% {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  75% {
+    -webkit-transform: translate(-3px);
+    transform: translate(-3px);
+  }
+}
+/* line 1, ../sass/utilities/_hamburger.scss */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+/* line 22, ../sass/utilities/_hamburger.scss */
+.hamburger:hover {
+  opacity: 1;
+}
+
+/* line 26, ../sass/utilities/_hamburger.scss */
+.hamburger-box {
+  width: 60px;
+  height: 34px;
+  display: inline-block;
+  position: relative;
+}
+
+/* line 33, ../sass/utilities/_hamburger.scss */
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+/* line 39, ../sass/utilities/_hamburger.scss */
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #F7EE45, #EDAE19);
+  border-radius: 2px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+  transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+/* line 55, ../sass/utilities/_hamburger.scss */
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+/* line 60, ../sass/utilities/_hamburger.scss */
+.hamburger-inner::before {
+  top: -15px;
+}
+
+/* line 64, ../sass/utilities/_hamburger.scss */
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+   * Emphatic
+   */
+/* line 71, ../sass/utilities/_hamburger.scss */
+.hamburger--emphatic {
+  overflow: hidden;
+}
+
+/* line 75, ../sass/utilities/_hamburger.scss */
+.hamburger--emphatic .hamburger-inner {
+  -webkit-transition: background 0.125s 0.175s ease-in;
+  transition: background 0.125s 0.175s ease-in;
+}
+
+/* line 80, ../sass/utilities/_hamburger.scss */
+.hamburger--emphatic .hamburger-inner::before {
+  left: 20px;
+  width: 20px;
+  -webkit-transition: top 0.05s 0.125s linear, left 0.125s 0.175s ease-in, -webkit-transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: top 0.05s 0.125s linear, left 0.125s 0.175s ease-in, -webkit-transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, left 0.125s 0.175s ease-in, -webkit-transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+/* line 89, ../sass/utilities/_hamburger.scss */
+.hamburger--emphatic .hamburger-inner::after {
+  width: 20px;
+  top: 15px;
+  right: 20px;
+  -webkit-transition: top 0.05s 0.125s linear, right 0.125s 0.175s ease-in, -webkit-transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: top 0.05s 0.125s linear, right 0.125s 0.175s ease-in, -webkit-transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in;
+  transition: transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335), top 0.05s 0.125s linear, right 0.125s 0.175s ease-in, -webkit-transform 0.125s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+
+/* line 99, ../sass/utilities/_hamburger.scss */
+.hamburger--emphatic.is-active .hamburger-inner {
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  background: transparent !important;
+}
+
+/* line 107, ../sass/utilities/_hamburger.scss */
+.hamburger--emphatic.is-active .hamburger-inner::before {
+  left: -80px;
+  top: -80px;
+  width: 60px;
+  -webkit-transform: translate3d(80px, 80px, 0) rotate(45deg);
+  transform: translate3d(80px, 80px, 0) rotate(45deg);
+  -webkit-transition: left 0.125s ease-out, top 0.05s 0.125s linear, -webkit-transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear, -webkit-transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: left 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* line 119, ../sass/utilities/_hamburger.scss */
+.hamburger--emphatic.is-active .hamburger-inner::after {
+  right: -80px;
+  top: -80px;
+  width: 60px;
+  -webkit-transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  transform: translate3d(-80px, 80px, 0) rotate(-45deg);
+  -webkit-transition: right 0.125s ease-out, top 0.05s 0.125s linear, -webkit-transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear, -webkit-transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: right 0.125s ease-out, top 0.05s 0.125s linear, transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1), -webkit-transform 0.125s 0.175s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* line 130, ../sass/utilities/_hamburger.scss */
+nav .hamburger {
+  position: absolute;
+  left: 50%;
+  top: calc(2rem - 15px);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 1;
+  z-index: 3;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* line 141, ../sass/utilities/_hamburger.scss */
+nav .hamburger:hover {
+  opacity: 0.5;
+}
+
+/* line 145, ../sass/utilities/_hamburger.scss */
+nav .hamburger:hover .hamburger-inner,
+nav .hamburger:hover .hamburger-inner::before,
+nav .hamburger:hover .hamburger-inner::after {
+  -webkit-animation: none;
+  animation: none;
+}
+
+/* line 152, ../sass/utilities/_hamburger.scss */
+nav .hamburger.is-active .hamburger-inner,
+nav .hamburger.is-active .hamburger-inner::before,
+nav .hamburger.is-active .hamburger-inner::after {
+  -webkit-animation: none;
+  animation: none;
+}
+
+/* line 159, ../sass/utilities/_hamburger.scss */
+nav .hamburger .hamburger-inner,
+nav .hamburger .hamburger-inner::before,
+nav .hamburger .hamburger-inner::after {
+  -webkit-animation: hamburger infinite linear 1s;
+  animation: hamburger infinite linear 1s;
+}
+
+/* line 166, ../sass/utilities/_hamburger.scss */
+nav .hamburger .hamburger-inner::before,
+nav .hamburger .hamburger-inner::after {
+  -webkit-animation-delay: .3s;
+  animation-delay: 0.3s;
+}
+
+/* line 20, ../sass/utilities/_menu.scss */
+.Menu-list {
+  font-size: 9rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 31, ../sass/utilities/_menu.scss */
+.Menu-list-item {
+  position: relative;
+  color: transparent;
+  cursor: pointer;
+}
+/* line 37, ../sass/utilities/_menu.scss */
+.Menu-list-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 49%;
+  left: -10%;
+  right: -10%;
+  height: 4px;
+  border-radius: 4px;
+  margin-top: -2px;
+  background: #F2CE2F;
+  transform: scale(0);
+  transition: transform 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  z-index: 1;
+}
+
+/* line 55, ../sass/utilities/_menu.scss */
+.Mask {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  color: #F2CE2F;
+  top: 0;
+  height: 49%;
+  transition: all 0.8s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+}
+/* line 64, ../sass/utilities/_menu.scss */
+.Mask span {
+  display: block;
+}
+
+/* line 68, ../sass/utilities/_menu.scss */
+.Mask + .Mask {
+  top: 48.9%;
+  height: 51.1%;
+}
+/* line 72, ../sass/utilities/_menu.scss */
+.Mask + .Mask span {
+  transform: translateY(-49%);
+}
+
+/* line 78, ../sass/utilities/_menu.scss */
+.Menu-list-item:hover .Mask,
+.Menu-list-item:active .Mask {
+  color: #FFF;
+  transform: skewX(12deg) translateX(5px);
+}
+/* line 79, ../sass/utilities/_menu.scss */
+.Menu-list-item:hover .Mask + .Mask,
+.Menu-list-item:active .Mask + .Mask {
+  transform: skewX(12deg) translateX(-5px);
+}
+/* line 80, ../sass/utilities/_menu.scss */
+.Menu-list-item:hover::before,
+.Menu-list-item:active::before {
+  transform: scale(1);
+}
+
+@font-face {
+  font-family: 'Ailerons-Regular';
+  src: url("../fonts/Ailerons-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Ailerons-Regular.otf") format("opentype"), url("../fonts/Ailerons-Regular.woff") format("woff"), url("../fonts/Ailerons-Regular.ttf") format("truetype"), url("../fonts/Ailerons-Regular.svg#Ailerons-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 9, ../sass/_main.scss */
+html {
+  overflow: hidden;
+}
+/* line 11, ../sass/_main.scss */
+html body {
+  cursor: url(../images/cursor.png) 1 1, auto !important;
+  font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+/* line 18, ../sass/_main.scss */
+html body #wrapper {
+  position: relative;
+  width: inherit;
+  height: inherit;
+  overflow: hidden;
+}
+/* line 23, ../sass/_main.scss */
+html body #wrapper canvas {
+  width: 100vw;
+  height: 100vh;
+}
+/* line 27, ../sass/_main.scss */
+html body #wrapper nav {
+  display: block;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+/* line 31, ../sass/_main.scss */
+html body #wrapper nav .Menu {
+  font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-50%) scale(0.8);
+  transform: translateX(-50%) scale(0.8);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+/* line 43, ../sass/_main.scss */
+html body #wrapper nav .Menu ul {
+  height: 75vh;
+  margin: 0;
+  padding: 5rem 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
+  -ms-justify-content: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+}
+/* line 51, ../sass/_main.scss */
+html body #wrapper nav .Menu ul li a {
+  color: #083B53;
+  text-decoration: none;
+}
+/* line 57, ../sass/_main.scss */
+html body #wrapper nav .Menu.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(1);
+  z-index: 2;
+}
+/* line 66, ../sass/_main.scss */
+html body #wrapper #home, html body #wrapper #work, html body #wrapper #contact {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 0;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+/* line 80, ../sass/_main.scss */
+html body #wrapper #home.active, html body #wrapper #work.active, html body #wrapper #contact.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* line 87, ../sass/_main.scss */
+html body #wrapper #home .name, html body #wrapper #work .name, html body #wrapper #contact .name {
+  background: linear-gradient(90deg, #F7EE45, #8c6200);
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 26px;
+  opacity: 1;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  text-decoration: none;
+}
+/* line 100, ../sass/_main.scss */
+html body #wrapper #home .content, html body #wrapper #work .content, html body #wrapper #contact .content {
+  position: absolute;
+  left: 30%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 55vw;
+  height: auto;
+}
+/* line 108, ../sass/_main.scss */
+html body #wrapper #home .content h1, html body #wrapper #work .content h1, html body #wrapper #contact .content h1 {
+  font-size: 80px;
+  background: linear-gradient(90deg, #F7EE45, #8c6200);
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 116, ../sass/_main.scss */
+html body #wrapper #home .content h1:after, html body #wrapper #work .content h1:after, html body #wrapper #contact .content h1:after {
+  background: linear-gradient(90deg, #F7EE45, #8c6200);
+  content: "";
+  height: 10px;
+  width: 55px;
+  position: absolute;
+  left: 13px;
+  bottom: -20px;
+}
+/* line 126, ../sass/_main.scss */
+html body #wrapper #home .content .description, html body #wrapper #work .content .description, html body #wrapper #contact .content .description {
+  width: 80%;
+  margin-left: 75px;
+  margin-top: -16px;
+}
+/* line 130, ../sass/_main.scss */
+html body #wrapper #home .content .description p, html body #wrapper #work .content .description p, html body #wrapper #contact .content .description p {
+  background: linear-gradient(90deg, #F7EE45, #8c6200);
+  font-family: 'Roboto', sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 140, ../sass/_main.scss */
+html body #wrapper #home .profile, html body #wrapper #work .profile, html body #wrapper #contact .profile {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-60deg) scale(1);
+  transform: translate(-50%, -50%) rotate(-60deg) scale(1);
+  width: 22vw;
+  height: auto;
+  z-index: 0;
+}
