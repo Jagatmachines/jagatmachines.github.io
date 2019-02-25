@@ -139,13 +139,54 @@ html {
                 }
                 .profile {
                     position: absolute;
-                    left: 20%;
-                    top: 50%;
-                    -webkit-transform: translate(-50%, -50%) rotate(-60deg) scale(1);
-                    transform: translate(-50%, -50%) rotate(-60deg) scale(1);
+                    left: 8%;
+                    top: 31%;
                     width: 22vw;
                     height: auto;
                     z-index: 0;
+                }
+                .socials {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    position: absolute;
+                    top: 1.5rem;
+                    right: 1.5rem;
+                    li {
+                        display: inline-block;
+                        font-size: 30px;
+                        margin-right: 5px;
+                        a {
+                            -webkit-transition: all .3s ease-in-out;
+                            transition: all .3s ease-in-out;
+                            .fa-gradient {
+                                background: linear-gradient(90deg, #F7EE45, #E3D338); 
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                -webkit-transition: all .3s ease-in-out;
+                                transition: all .3s ease-in-out;
+                            }
+                            &:hover {
+                                .fa-gradient {
+                                    opacity: 0.5;
+                                }
+                            }
+                        }
+                    }
+                }
+                footer {
+                    position: absolute;
+                    right: 1.5rem;
+                    bottom: .5rem;
+                    p {
+                        background: linear-gradient(90deg, #F7EE45, #8c6200); 
+                        font-family: 'Roboto', sans-serif;
+                        font-size: 12px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
             }
         }
