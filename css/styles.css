@@ -307,11 +307,11 @@ nav .hamburger .hamburger-inner::after {
   font-weight: normal;
   font-style: normal;
 }
-/* line 9, ../sass/_main.scss */
+/* line 8, ../sass/_main.scss */
 html {
   overflow: hidden;
 }
-/* line 11, ../sass/_main.scss */
+/* line 10, ../sass/_main.scss */
 html body {
   cursor: url(../images/cursor.png) 1 1, auto !important;
   font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
@@ -320,25 +320,25 @@ html body {
   width: 100vw;
   height: 100vh;
 }
-/* line 18, ../sass/_main.scss */
+/* line 17, ../sass/_main.scss */
 html body #wrapper {
   position: relative;
   width: inherit;
   height: inherit;
   overflow: hidden;
 }
-/* line 23, ../sass/_main.scss */
+/* line 22, ../sass/_main.scss */
 html body #wrapper canvas {
   width: 100vw;
   height: 100vh;
 }
-/* line 27, ../sass/_main.scss */
+/* line 26, ../sass/_main.scss */
 html body #wrapper nav {
   display: block;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-/* line 31, ../sass/_main.scss */
+/* line 30, ../sass/_main.scss */
 html body #wrapper nav .Menu {
   font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
   position: absolute;
@@ -352,7 +352,7 @@ html body #wrapper nav .Menu {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-/* line 43, ../sass/_main.scss */
+/* line 42, ../sass/_main.scss */
 html body #wrapper nav .Menu ul {
   height: 75vh;
   margin: 0;
@@ -372,12 +372,12 @@ html body #wrapper nav .Menu ul {
   justify-content: space-evenly;
   -ms-flex-pack: space-evenly;
 }
-/* line 51, ../sass/_main.scss */
+/* line 50, ../sass/_main.scss */
 html body #wrapper nav .Menu ul li a {
   color: #083B53;
   text-decoration: none;
 }
-/* line 57, ../sass/_main.scss */
+/* line 56, ../sass/_main.scss */
 html body #wrapper nav .Menu.active {
   opacity: 1;
   visibility: visible;
@@ -385,7 +385,7 @@ html body #wrapper nav .Menu.active {
   transform: translateX(-50%) scale(1);
   z-index: 2;
 }
-/* line 66, ../sass/_main.scss */
+/* line 65, ../sass/_main.scss */
 html body #wrapper #home, html body #wrapper #work, html body #wrapper #contact {
   position: absolute;
   top: 0;
@@ -401,7 +401,7 @@ html body #wrapper #home, html body #wrapper #work, html body #wrapper #contact 
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
-/* line 80, ../sass/_main.scss */
+/* line 79, ../sass/_main.scss */
 html body #wrapper #home.active, html body #wrapper #work.active, html body #wrapper #contact.active {
   opacity: 1;
   visibility: visible;
@@ -409,7 +409,7 @@ html body #wrapper #home.active, html body #wrapper #work.active, html body #wra
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-/* line 87, ../sass/_main.scss */
+/* line 86, ../sass/_main.scss */
 html body #wrapper #home .name, html body #wrapper #work .name, html body #wrapper #contact .name {
   background: linear-gradient(90deg, #F7EE45, #8c6200);
   position: absolute;
@@ -423,7 +423,7 @@ html body #wrapper #home .name, html body #wrapper #work .name, html body #wrapp
   transition: all .3s ease-in-out;
   text-decoration: none;
 }
-/* line 100, ../sass/_main.scss */
+/* line 99, ../sass/_main.scss */
 html body #wrapper #home .content, html body #wrapper #work .content, html body #wrapper #contact .content {
   position: absolute;
   left: 30%;
@@ -433,7 +433,7 @@ html body #wrapper #home .content, html body #wrapper #work .content, html body 
   width: 55vw;
   height: auto;
 }
-/* line 108, ../sass/_main.scss */
+/* line 107, ../sass/_main.scss */
 html body #wrapper #home .content h1, html body #wrapper #work .content h1, html body #wrapper #contact .content h1 {
   font-size: 80px;
   background: linear-gradient(90deg, #F7EE45, #8c6200);
@@ -443,7 +443,7 @@ html body #wrapper #home .content h1, html body #wrapper #work .content h1, html
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 116, ../sass/_main.scss */
+/* line 115, ../sass/_main.scss */
 html body #wrapper #home .content h1:after, html body #wrapper #work .content h1:after, html body #wrapper #contact .content h1:after {
   background: linear-gradient(90deg, #F7EE45, #8c6200);
   content: "";
@@ -453,13 +453,13 @@ html body #wrapper #home .content h1:after, html body #wrapper #work .content h1
   left: 13px;
   bottom: -20px;
 }
-/* line 126, ../sass/_main.scss */
+/* line 125, ../sass/_main.scss */
 html body #wrapper #home .content .description, html body #wrapper #work .content .description, html body #wrapper #contact .content .description {
   width: 80%;
   margin-left: 75px;
   margin-top: -16px;
 }
-/* line 130, ../sass/_main.scss */
+/* line 129, ../sass/_main.scss */
 html body #wrapper #home .content .description p, html body #wrapper #work .content .description p, html body #wrapper #contact .content .description p {
   background: linear-gradient(90deg, #F7EE45, #8c6200);
   font-family: 'Roboto', sans-serif;
@@ -468,7 +468,7 @@ html body #wrapper #home .content .description p, html body #wrapper #work .cont
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 140, ../sass/_main.scss */
+/* line 139, ../sass/_main.scss */
 html body #wrapper #home .profile, html body #wrapper #work .profile, html body #wrapper #contact .profile {
   position: absolute;
   left: 8%;
@@ -477,7 +477,7 @@ html body #wrapper #home .profile, html body #wrapper #work .profile, html body 
   height: auto;
   z-index: 0;
 }
-/* line 148, ../sass/_main.scss */
+/* line 147, ../sass/_main.scss */
 html body #wrapper #home .socials, html body #wrapper #work .socials, html body #wrapper #contact .socials {
   list-style: none;
   margin: 0;
@@ -486,18 +486,18 @@ html body #wrapper #home .socials, html body #wrapper #work .socials, html body 
   top: 1.5rem;
   right: 1.5rem;
 }
-/* line 155, ../sass/_main.scss */
+/* line 154, ../sass/_main.scss */
 html body #wrapper #home .socials li, html body #wrapper #work .socials li, html body #wrapper #contact .socials li {
   display: inline-block;
   font-size: 30px;
   margin-right: 5px;
 }
-/* line 159, ../sass/_main.scss */
+/* line 158, ../sass/_main.scss */
 html body #wrapper #home .socials li a, html body #wrapper #work .socials li a, html body #wrapper #contact .socials li a {
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-/* line 162, ../sass/_main.scss */
+/* line 161, ../sass/_main.scss */
 html body #wrapper #home .socials li a .fa-gradient, html body #wrapper #work .socials li a .fa-gradient, html body #wrapper #contact .socials li a .fa-gradient {
   background: linear-gradient(90deg, #F7EE45, #E3D338);
   -webkit-background-clip: text;
@@ -505,17 +505,17 @@ html body #wrapper #home .socials li a .fa-gradient, html body #wrapper #work .s
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
-/* line 170, ../sass/_main.scss */
+/* line 169, ../sass/_main.scss */
 html body #wrapper #home .socials li a:hover .fa-gradient, html body #wrapper #work .socials li a:hover .fa-gradient, html body #wrapper #contact .socials li a:hover .fa-gradient {
   opacity: 0.5;
 }
-/* line 177, ../sass/_main.scss */
+/* line 176, ../sass/_main.scss */
 html body #wrapper #home footer, html body #wrapper #work footer, html body #wrapper #contact footer {
   position: absolute;
   right: 1.5rem;
   bottom: .5rem;
 }
-/* line 181, ../sass/_main.scss */
+/* line 180, ../sass/_main.scss */
 html body #wrapper #home footer p, html body #wrapper #work footer p, html body #wrapper #contact footer p {
   background: linear-gradient(90deg, #F7EE45, #8c6200);
   font-family: 'Roboto', sans-serif;
@@ -524,4 +524,8 @@ html body #wrapper #home footer p, html body #wrapper #work footer p, html body 
   text-transform: uppercase;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+/* line 190, ../sass/_main.scss */
+html body #wrapper #home .portfolio-wrap, html body #wrapper #work .portfolio-wrap, html body #wrapper #contact .portfolio-wrap {
+  padding: 0 30px;
 }
