@@ -5,7 +5,6 @@
     font-weight: normal;
     font-style: normal;
 }
-  
 html {
     overflow: hidden;
     body {
@@ -189,6 +188,13 @@ html {
                     }
                 }
             }
+            #work {
+                .portfolio-wrap {
+                    width: 80%;
+                    height: 100vh;
+                }
+            }
         }
     }
 }
+
