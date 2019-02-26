@@ -188,7 +188,33 @@ html {
                     }
                 }
                 .portfolio-wrap {
-                    padding: 0 30px;
+                    align-items: center;
+                    height: 100%;
+                    justify-content: center;
+                    @include flexbox;
+                   ul {
+                       flex-wrap: wrap;
+                       list-style: none;
+                       margin: 0;
+                       padding: 0;
+                       width: 60%; 
+                       @include flexbox;
+                       li {
+                           float: left;
+                           margin-bottom: -3px;
+                           width: 33%;
+                           &.showcase {
+                            align-items: center;
+                            background: linear-gradient(90deg, #F7EE45, #8c6200); 
+                            font-size: 50px;
+                            font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
+                            justify-content: center;
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            @include flexbox();
+                           }
+                       }
+                   }
                 }
             }
         }

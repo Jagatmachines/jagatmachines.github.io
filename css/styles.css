@@ -527,5 +527,46 @@ html body #wrapper #home footer p, html body #wrapper #work footer p, html body 
 }
 /* line 190, ../sass/_main.scss */
 html body #wrapper #home .portfolio-wrap, html body #wrapper #work .portfolio-wrap, html body #wrapper #contact .portfolio-wrap {
-  padding: 0 30px;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 195, ../sass/_main.scss */
+html body #wrapper #home .portfolio-wrap ul, html body #wrapper #work .portfolio-wrap ul, html body #wrapper #contact .portfolio-wrap ul {
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 60%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/* line 202, ../sass/_main.scss */
+html body #wrapper #home .portfolio-wrap ul li, html body #wrapper #work .portfolio-wrap ul li, html body #wrapper #contact .portfolio-wrap ul li {
+  float: left;
+  margin-bottom: -3px;
+  width: 33%;
+}
+/* line 206, ../sass/_main.scss */
+html body #wrapper #home .portfolio-wrap ul li.showcase, html body #wrapper #work .portfolio-wrap ul li.showcase, html body #wrapper #contact .portfolio-wrap ul li.showcase {
+  align-items: center;
+  background: linear-gradient(90deg, #F7EE45, #8c6200);
+  font-size: 50px;
+  font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
+  justify-content: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
 }
