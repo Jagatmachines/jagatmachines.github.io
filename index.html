@@ -6,14 +6,57 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
+
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/imagehover.min.css">
-    <link rel="stylesheet" href="css/styles.css">
     <title>Prabhakar Shrestha - UX/UI Designer</title>
 </head>
 <body>
-    <div id="wrapper">
+    <style>
+        body{
+            background:#131313;
+            color:#E3E3E3;
+            font-family:sans-serif;
+            }
+
+            .loading {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0;
+            position: relative; }
+
+            .loading svg {
+            width: 100%;
+            height: 100%;
+            }
+
+            .loading #pulsar{
+            stroke-dasharray:281;
+            -webkit-animation: dash 2.5s infinite linear forwards;
+            }
+
+            /*Animation*/
+            @-webkit-keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}}
+
+            .inactive {
+                display: none
+            }
+    </style>
+
+    <div class="loading">
+
+        <svg version="1.2" height="300" width="600" xmlns="http://www.w3.org/2000/svg"
+            viewport="0 0 60 60" xmlns:xlink="http://www.w3.org/1999/xlink">
+        
+            <path id="pulsar" stroke="rgba(0,155,155,1)" fill="none" stroke-width="1"stroke-linejoin="round" d="M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210" /> 
+            
+        </svg>
+        
+    </div>
+
+
+
+    <div id="wrapper" class="inactive">
         <canvas id="canvas"></canvas>
         <nav>
             <div class="hamburger hamburger--emphatic">
@@ -31,14 +74,14 @@
                     </a>
                   </li>
                   <li class="Menu-list-item">
-                    <a href="#work">
+                    <a id='clickWork' href="#work">
                         Work
                         <span class="Mask"><span>Work</span></span>
                         <span class="Mask"><span>Work</span></span>
                     </a>
                   </li>
                   <li class="Menu-list-item">
-                    <a href="#contact">
+                    <a id='clickContact' href="#contact">
                         Contact
                         <span class="Mask"><span>Contact</span></span>
                         <span class="Mask"><span>Contact</span></span>
@@ -149,8 +192,23 @@
             </footer>
          </section>
     </div>
+
+    <script>
+        let interval = setInterval(() => {
+            if (document.readyState == 'complete') {
+                $('#wrapper').removeClass('inactive');
+                $('.loading').addClass('inactive');
+            }
+        }, 1000);
+    </script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/imagehover.min.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/canvas.js"></script>
     <script src="js/main.js"></script>
+    
+    
 </body>
 </html>
