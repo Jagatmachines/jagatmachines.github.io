@@ -570,3 +570,9 @@ html body #wrapper #home .portfolio-wrap ul li.showcase, html body #wrapper #wor
   display: -webkit-flex;
   display: flex;
 }
+.active.removeActive {
+  opacity: 0 !important;
+}
+.active{
+  opacity: 1 !important;;
+}
