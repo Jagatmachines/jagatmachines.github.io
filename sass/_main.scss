@@ -433,14 +433,19 @@ html {
                         resize: none;
                     }
                     input[type = submit] {
-                        background: #F2CE2F;
-                        color: #fff;
-                        cursor: pointer;
-                        margin: 0 auto;
-                        padding: 10px 0;
-                        width: 150px;
+                        background: none;
+                        border: 2px solid #F4E943;
+                        color: #F4E943;
+                        display: inline-block;
+                        font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
+                        padding: 5px 40px;
+                        -webkit-transition: all .3s ease-in-out;
+                        transition: all .3s ease-in-out;
+                        text-decoration: none;
+                        width: auto;
                         &:hover {
-                            opacity: 0.8;
+                            opacity: 0.7;
+                            text-decoration: none;
                         }
                     }
                 }
