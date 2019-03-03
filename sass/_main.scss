@@ -289,9 +289,35 @@ html {
                     }
                 }
                 form {
+                    font-family: 'Roboto', sans-serif;
+                    margin-top: 45px;
+                    padding-left: 14px;
+                    width: 77%;
                     input, textarea, button {
+                        background: rgba(#ffffff, 0.7);
                         width: 100%;
                         border: none;
+                        padding: 3px 10px;
+                        @include border-radius(2px);
+                    }
+                    input {
+                        line-height: 30px;
+                        margin-bottom: 10px;
+                    }
+                    textarea {
+                        font-family: 'Roboto', sans-serif  ;
+                        margin-bottom: 10px;
+                    }
+                    button {
+                        background: #F2CE2F;
+                        color: #fff;
+                        cursor: pointer;
+                        margin: 0 auto;
+                        padding: 10px 0;
+                        width: 150px;
+                        &:hover {
+                            opacity: 0.8;
+                        }
                     }
                 }
             }
