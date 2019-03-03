@@ -38,6 +38,12 @@ $( document ).ready(function() {
         $(document).find('.is-active').removeClass('is-active');
         $('#contact').addClass('active').removeClass('removeActive');
     })
+    $(".name").click(() => {
+        loading();
+        $(document).find('.active').removeClass('active removeActive');`1`
+        $(document).find('.is-active').removeClass('is-active');
+        $('#home').addClass('active').removeClass('removeActive');
+    })
 
 });
 
