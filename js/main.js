@@ -10,12 +10,12 @@ $( document ).ready(function() {
     });
 
     function loading() {
-        $('.loading').removeClass('inactive');
+        $('.container').removeClass('inactive');
         $('#wrapper').addClass('inactive');
 
         setTimeout(() => {
             $('#wrapper').removeClass('inactive');
-            $('.loading').addClass('inactive');
+            $('.container').addClass('inactive');
         }, 1000)
     }
 
@@ -31,6 +31,12 @@ $( document ).ready(function() {
         $(document).find('.active').removeClass('active removeActive');
         $(document).find('.is-active').removeClass('is-active');
         $('#work').addClass('active').removeClass('removeActive');
+    })
+    $("#clickContact").click(() => {
+        loading();
+        $(document).find('.active').removeClass('active removeActive');
+        $(document).find('.is-active').removeClass('is-active');
+        $('#contact').addClass('active').removeClass('removeActive');
     })
 });
 

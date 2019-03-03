@@ -1,32 +1,38 @@
 @font-face {
     font-family: 'Ailerons-Regular';
-    src: url('../fonts/Ailerons-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/Ailerons-Regular.otf')  format('opentype'),
-            url('../fonts/Ailerons-Regular.woff') format('woff'), url('../fonts/Ailerons-Regular.ttf')  format('truetype'), url('../fonts/Ailerons-Regular.svg#Ailerons-Regular') format('svg');
+    src: url('../fonts/Ailerons-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Ailerons-Regular.otf') format('opentype'),
+        url('../fonts/Ailerons-Regular.woff') format('woff'), url('../fonts/Ailerons-Regular.ttf') format('truetype'), url('../fonts/Ailerons-Regular.svg#Ailerons-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 html {
     overflow: hidden;
+
     body {
-        cursor: url(../images/cursor.png) 1 1,auto !important;
+        cursor: url(../images/cursor.png) 1 1, auto !important;
         font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
         margin: 0;
         padding: 0;
         width: 100vw;
         height: 100vh;
+
         #wrapper {
             position: relative;
             width: inherit;
             height: inherit;
             overflow: hidden;
-            canvas{
+
+            canvas {
                 width: 100vw;
                 height: 100vh;
             }
+
             nav {
                 display: block;
                 -webkit-transition: all .3s ease-in-out;
                 transition: all .3s ease-in-out;
+
                 .Menu {
                     font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
                     position: absolute;
@@ -39,6 +45,7 @@ html {
                     transform: translateX(-50%) scale(0.8);
                     -webkit-transition: all .3s ease-in-out;
                     transition: all .3s ease-in-out;
+
                     ul {
                         height: 75vh;
                         margin: 0;
@@ -46,6 +53,7 @@ html {
                         @include flexbox();
                         @include flex-direction(column);
                         @include justify-content(space-evenly);
+
                         li {
                             a {
                                 color: #083B53;
@@ -53,6 +61,7 @@ html {
                             }
                         }
                     }
+
                     &.active {
                         opacity: 1;
                         visibility: visible;
@@ -62,7 +71,10 @@ html {
                     }
                 }
             }
-            #home, #work, #contact {
+
+            #home,
+            #work,
+            #contact {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -76,6 +88,7 @@ html {
                 transform: scale(1.1);
                 -webkit-transition: all .5s ease-in-out;
                 transition: all .5s ease-in-out;
+
                 &.active {
                     opacity: 1;
                     visibility: visible;
@@ -83,8 +96,9 @@ html {
                     -webkit-transform: scale(1);
                     transform: scale(1);
                 }
+
                 .name {
-                    background: linear-gradient(90deg, #F7EE45, #8c6200); 
+                    background: linear-gradient(90deg, #F7EE45, #8c6200);
                     position: absolute;
                     top: 1.5rem;
                     left: 1.5rem;
@@ -96,6 +110,7 @@ html {
                     transition: all .3s ease-in-out;
                     text-decoration: none;
                 }
+
                 .content {
                     position: absolute;
                     left: 30%;
@@ -104,16 +119,18 @@ html {
                     transform: translateY(-50%);
                     width: 55vw;
                     height: auto;
+
                     h1 {
                         font-size: 80px;
-                        background: linear-gradient(90deg, #F7EE45, #8c6200); 
+                        background: linear-gradient(90deg, #F7EE45, #8c6200);
                         margin: 0;
                         padding: 0;
                         position: relative;
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
+
                         &:after {
-                            background: linear-gradient(90deg, #F7EE45, #8c6200); 
+                            background: linear-gradient(90deg, #F7EE45, #8c6200);
                             content: "";
                             height: 10px;
                             width: 55px;
@@ -122,12 +139,14 @@ html {
                             bottom: -20px;
                         }
                     }
+
                     .description {
                         width: 80%;
                         margin-left: 75px;
                         margin-top: -16px;
+
                         p {
-                            background: linear-gradient(90deg, #F7EE45, #8c6200); 
+                            background: linear-gradient(90deg, #F7EE45, #8c6200);
                             font-family: 'Roboto', sans-serif;
                             font-size: 21px;
                             font-weight: 500;
@@ -136,6 +155,7 @@ html {
                         }
                     }
                 }
+
                 .profile {
                     position: absolute;
                     left: 8%;
@@ -144,6 +164,7 @@ html {
                     height: auto;
                     z-index: 0;
                 }
+
                 .socials {
                     list-style: none;
                     margin: 0;
@@ -151,20 +172,24 @@ html {
                     position: absolute;
                     top: 1.5rem;
                     right: 1.5rem;
+
                     li {
                         display: inline-block;
                         font-size: 30px;
                         margin-right: 5px;
+
                         a {
                             -webkit-transition: all .3s ease-in-out;
                             transition: all .3s ease-in-out;
+
                             .fa-gradient {
-                                background: linear-gradient(90deg, #F7EE45, #E3D338); 
+                                background: linear-gradient(90deg, #F7EE45, #E3D338);
                                 -webkit-background-clip: text;
                                 -webkit-text-fill-color: transparent;
                                 -webkit-transition: all .3s ease-in-out;
                                 transition: all .3s ease-in-out;
                             }
+
                             &:hover {
                                 .fa-gradient {
                                     opacity: 0.5;
@@ -173,12 +198,14 @@ html {
                         }
                     }
                 }
+
                 footer {
                     position: absolute;
                     right: 1.5rem;
                     bottom: .5rem;
+
                     p {
-                        background: linear-gradient(90deg, #F7EE45, #8c6200); 
+                        background: linear-gradient(90deg, #F7EE45, #8c6200);
                         font-family: 'Roboto', sans-serif;
                         font-size: 12px;
                         font-weight: 500;
@@ -187,37 +214,109 @@ html {
                         -webkit-text-fill-color: transparent;
                     }
                 }
+
                 .portfolio-wrap {
                     align-items: center;
                     height: 100%;
                     justify-content: center;
                     @include flexbox;
-                   ul {
-                       flex-wrap: wrap;
-                       list-style: none;
-                       margin: 0;
-                       padding: 0;
-                       width: 60%; 
-                       @include flexbox;
-                       li {
-                           float: left;
-                           margin-bottom: -3px;
-                           width: 33%;
-                           &.showcase {
-                            align-items: center;
-                            background: linear-gradient(90deg, #F7EE45, #8c6200); 
-                            font-size: 50px;
-                            font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
-                            justify-content: center;
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            @include flexbox();
-                           }
-                       }
-                   }
+
+                    figure {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                        figcaption {
+                            background:  #deac00;
+                            font-family: 'Roboto', sans-serif;
+                            padding: 20px;
+
+                            h3 {
+                                font-size: 24px;
+                                font-weight: bold;
+                                margin: 0 0 7px 0;
+                                padding: 0;
+                                text-transform: uppercase;
+                            }
+
+                            p {
+                                font-size: 13px;
+                                font-weight: 500;
+                                margin: 0;
+                                padding: 0;
+                                text-transform: uppercase;
+                            }
+
+                            ul {
+                                font-size: 12px;
+                                margin: 0;
+                                padding: 0;
+                                width: 100%;
+
+                                li {
+                                    display: block;
+                                    line-height: 17px;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    ul {
+                        flex-wrap: wrap;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        width: 60%;
+                        @include flexbox;
+
+                        li {
+                            float: left;
+                            margin-bottom: -3px;
+                            width: 33.33%;
+
+                            &.showcase {
+                                align-items: center;
+                                background: linear-gradient(90deg, #F7EE45, #8c6200);
+                                font-size: 40px;
+                                font-family: 'Ailerons-Regular', Arial, Helvetica, sans-serif;
+                                justify-content: center;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                @include flexbox();
+                            }
+                        }
+                    }
                 }
+                form {
+                    input, textarea, button {
+                        width: 100%;
+                        border: none;
+                    }
+                }
+            }
+
+            #home.active.removeActive,
+            #work.active.removeActive,
+            #contact.active.removeActive {
+                opacity: 0;
+                visibility: hidden;
+                z-index: 0;
+                -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+                -webkit-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+            }
+
+            #home.active,
+            #work.active,
+            #contact.active {
+                opacity: 1;
+                visibility: visible;
+                z-index: 1;
+                -webkit-transform: scale(1);
+                transform: scale(1);
             }
         }
     }
 }
-

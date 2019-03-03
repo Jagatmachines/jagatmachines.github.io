@@ -35,9 +35,3 @@ nav .hamburger .hamburger-inner, nav .hamburger .hamburger-inner::before, nav .h
     -webkit-animation: hamburger infinite linear 1s;
     animation: hamburger infinite linear 1s;
 }
-.active.removeActive {
-    visibility: hidden !important;
-}
-.active{
-    visibility: visible;
-}
