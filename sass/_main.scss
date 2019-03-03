@@ -5,6 +5,13 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Anson-Regular';
+    src: url('../fonts/anson-regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/anson-regular-webfont.otf') format('opentype'),
+        url('../fonts/anson-regular-webfont.woff') format('woff'), url('../fonts/anson-regular-webfont.ttf') format('truetype'), url('../fonts/Ailerons-Regular.svg#Ailerons-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
     overflow: hidden;
@@ -16,7 +23,18 @@ html {
         padding: 0;
         width: 100vw;
         height: 100vh;
-
+        .desktop-view {
+            display: flex;
+            @media screen and (max-width: 768px) {
+                display: none !important ;
+            }
+        }
+        .mobile-view {
+            display: none !important;
+            @media screen and (max-width: 768px) {
+                display: flex !important;
+            }
+        }
         #wrapper {
             position: relative;
             width: inherit;
@@ -273,24 +291,34 @@ html {
                             width: 100%;
                         }
                         figcaption {
-                            background:  #deac00;
+                            background:  rgba(#000000, 0.4);
                             font-family: 'Roboto', sans-serif;
                             padding: 20px;
-
+                            color: #8c6200;
                             h3 {
+                                background: linear-gradient(90deg, #F7EE45, #8c6200);
+                                font-family: 'Anson-Regular';
                                 font-size: 24px;
                                 font-weight: bold;
                                 margin: 0 0 7px 0;
                                 padding: 0;
                                 text-transform: uppercase;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                @media screen and (max-width: 1090px) {
+                                    font-size: 20px;
+                                }
                             }
 
                             p {
+                                background: linear-gradient(90deg, #F7EE45, #8c6200);
                                 font-size: 13px;
                                 font-weight: 500;
-                                margin: 0;
+                                margin: 0 0 4px 0;
                                 padding: 0;
                                 text-transform: uppercase;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
                             }
 
                             ul {
@@ -300,9 +328,24 @@ html {
                                 width: 100%;
 
                                 li {
+                                    background: linear-gradient(90deg, #F7EE45, #8c6200);
                                     display: block;
                                     line-height: 17px;
                                     width: 100%;
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                            }
+                            @media screen and (max-width: 992px) {
+                                padding: 10px;
+                                h3 {
+                                    font-size: 16px;
+                                }
+                                p {
+                                    font-size: 11px;
+                                }
+                                ul {
+                                    font-size: 10px;
                                 }
                             }
                         }
@@ -330,6 +373,39 @@ html {
                                 -webkit-background-clip: text;
                                 -webkit-text-fill-color: transparent;
                                 @include flexbox();
+                                @media screen and (max-width: 992px) {
+                                    font-size: 32px;
+                                }
+                            }
+                        }
+                        &.mobile-view {
+                            justify-content: space-around;
+                            li {
+                                width: 48%;
+                                margin-bottom: 2%;
+                                &.showcase {
+                                    font-size: 60px;
+                                    justify-content: left;
+                                    margin-bottom: 40px;
+                                    position: relative;
+                                    width: 100%;
+                                    &:after {
+                                        background: linear-gradient(90deg, #F7EE45, #8c6200);
+                                        content: "";
+                                        height: 10px;
+                                        width: 55px;
+                                        position: absolute;
+                                        left: 13px;
+                                        bottom: -20px;
+                                    }
+                                }
+                                figcaption {
+                                    ul {
+                                        li {
+                                            width: 100%;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
