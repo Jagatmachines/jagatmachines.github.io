@@ -1,6 +1,6 @@
 // === Variables =====
 $perspective:     60rem;
-$font-size:       9rem;
+$font-size:       80px;
 $split-position:  49%;
 $split-thickness: 4px;
 $split-color:     #F2CE2F;
@@ -25,6 +25,9 @@ $split-color:     #F2CE2F;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (max-width: 768px) {
+    font-size: 60px;
+  }
 }
 
 // === Menu item =====

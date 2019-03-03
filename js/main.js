@@ -38,6 +38,7 @@ $( document ).ready(function() {
         $(document).find('.is-active').removeClass('is-active');
         $('#contact').addClass('active').removeClass('removeActive');
     })
+
 });
 
 
